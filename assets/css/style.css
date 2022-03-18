@@ -2,12 +2,13 @@ body {
     font-family: 'Montserrat', sans-serif !important;
 }
 
-.navbar h1 {
+.navbar h1 a {
     color: white;
     font-weight: bold;
+    text-decoration: none;
 }
 
-.navbar h1:hover {
+.navbar h1 a:hover {
     background: #eeeff0;
     color: rgba(0, 0, 0, 0.418);
     box-sizing: border-box;
@@ -42,11 +43,11 @@ body {
     border-top: 4px solid #eeeff0;
 }
 
-.resume {
+#resume {
     padding-top: 52px;
 }
 
-.resume h3 {
+#resume h3 {
     margin-top: 20px;
     color: white;
     font-size: 60px;
@@ -55,16 +56,16 @@ body {
     border-radius: 10px;
 }
 
-.resume h3:hover {
+#resume h3:hover {
     transition: 0.5s;
     background: rgba(255, 255, 255, 0.637);
 }
 
-.resume p {
+#resume p {
     padding: 10px;
 }
 
-.resume p::after {
+#resume p::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -73,12 +74,12 @@ body {
     margin: auto;
 }
 
-.resume p:hover::after {
+#resume p:hover::after {
     width: 50%;
     border-top: 4px solid #eeeff0;
 }
 
-.resume img {
+#resume img {
     position: relative;
 }
 
