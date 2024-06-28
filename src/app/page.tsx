@@ -1,14 +1,11 @@
-import Content from "@/components/templates/content";
-import Head from "next/head";
-import Navbar from "@/components/templates/navbar";
-export default function App() {
+import Image from "next/image";
+import MainLayout from "./layouts/MainLayout";
+import Dashboard from "./dashboard/page";
+import RootLayout from "./layout";
+export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Rizkynfal Portfolio</title>
-      </Head>{" "}
-      <Navbar />
-      <Content />
-    </>
+  <>
+  <Dashboard/>
+  </>
   );
 }
