@@ -1,13 +1,16 @@
 export default function Footer() {
   return (
-    <footer className="bg-mainPurple dark:text-white w-full static">
+    <footer className="bg-transparent backdrop-blur-xl dark:text-white w-full static">
       <div className="flex flex-col items-center  text-center text-surface ">
         <div className="container px-6 pt-6">
           <div className="mb-6 md:me-auto">
             <h1 className="text-white text-center text-4xl font-bold my-4">
               Contact
             </h1>
-            <p className="text-white text-center text-base my-4">
+            <p
+              className="delay-[300ms] duration-[600ms] taos:translate-x-[200px] taos:opacity-0 text-white text-center text-base my-4"
+              data-taos-offset="400"
+            >
               If you want to hire me or need more information about me, please
               do not hesitate to contact me. Thank you for your time.
             </p>
