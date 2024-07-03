@@ -10,6 +10,9 @@ module.exports = {
       transitionDuration: {
         8000: "8000ms",
       },
+      animation: {
+        wiggle: "wiggle 5s ease-in-out infinite",
+      },
       maxHeight: {
         maxHeightCard: "450px",
       },
@@ -25,6 +28,10 @@ module.exports = {
       fontSize: {
         xxxs: "8px",
         xxs: "10px",
+        "10xl": "140px",
+        "11xl": "155px",
+        "12xl": "165px",
+        "17xl": "280px",
       },
       boxShadow: {
         cardShadow: "0 0px 40px -20px #7b00ff",
@@ -33,7 +40,7 @@ module.exports = {
       },
       backgroundColor: {
         glassBg: "rgba( 255, 255, 255, 0.15 )",
-        warmWhite: "#F5F5F5",
+        warmWhite: "#dddddd",
         btnHoverColor: "rgb(119,85,204)",
         mainPurple: "rgb(172, 96, 255)",
         mainBlack: "#121212",
@@ -42,7 +49,7 @@ module.exports = {
       textColor: {
         mainPurple: "rgb(172, 96, 255)",
         mainBlack: "#0A0A0A",
-        warmWhite: "#F5F5F5",
+        warmWhite: "#dddddd",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

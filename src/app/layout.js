@@ -17,14 +17,13 @@ export default function RootLayout({ children }) {
         <title>Rizky Portfolio</title>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
-      <body className="bg-mainBlack">
+      <body className="bg-mainBlack ">
         <Navbar />
-        <section className="w-screen mx-auto mt-16">
+        <section className="container mx-auto  overflow-hidden">
           {children ?? <Dashboard />}
         </section>
         <Footer />
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>{}</script>
       </body>
     </html>
   );

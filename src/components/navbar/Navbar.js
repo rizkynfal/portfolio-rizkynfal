@@ -1,15 +1,12 @@
 export default function Navbar() {
-  // const toogleHumberger = () => {
-  //   let toggleMenu = document.querySelector("#toggleMenu");
-
-  //   toggleMenu.onclick = () => {
-  //     toggleMenu.classNameList.toggle("hamburger-toggle");
-  //   };
-  // };
+  const toogleHumberger = () => {
+    let toggleMenu = document.getElementById("#navbarSupportedContent1");
+    toggleMenu.style.visibility = true;
+  };
   return (
     <header>
-      <nav className="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-center  backdrop-blur-xl lg:flex-wrap lg:justify-start lg:py-4">
-        <div className="flex w-full flex-wrap items-center justify-center px-3 mx-auto">
+      <nav className="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-center backdrop-blur-xl lg:flex-wrap lg:justify-start lg:py-4 ">
+        <div className="flex w-full flex-wrap items-center justify-center px-3 mx-auto ">
           <button
             className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
             type="button"
@@ -40,26 +37,26 @@ export default function Navbar() {
             id="navbarSupportedContent1"
             data-twe-collapse-item
           >
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ms-28">
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ms-48">
               <a
-                className=" items-center text-transparent bg-warmWhite bg-clip-text text-2xl font-bold "
-                href="#"
+                className="items-center text-transparent bg-warmWhite bg-clip-text text-2xl font-bold "
+                href="/"
               >
                 rizkynfal
               </a>
             </div>
 
             <ul
-              className="list-style-none me-28 flex flex-col ps-0 lg:flex-row"
+              className="list-style-none me-48 flex flex-col ps-0 lg:flex-row"
               data-twe-navbar-nav-ref
             >
               <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
                 <a
-                  href="#projects"
+                  href="#experiences"
                   className="rounded-md px-3 py-2 text-transparent bg-warmWhite bg-clip-text text-lg font-medium transition duration-200  hover:ease-in-out motion-reduce:transition-none"
                   data-twe-nav-link-ref
                 >
-                  Projects
+                  Experiences
                 </a>
               </li>
               <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>

@@ -1,52 +1,39 @@
 "use client";
-import { useRef } from "react";
-import useIsVisible from "../ScrollDetected";
+import React, { useEffect, useRef } from "react";
+import { scrolling, useIsVisible } from "../ScrollDetected";
+import { Parallax, useParallax } from "react-scroll-parallax";
+import { Provider } from "../ParallaxProvider";
+
 export default function Hero() {
-  const ref1 = useRef();
-  const isVisible = useIsVisible(ref1);
+  const ref = useRef(null);
 
   return (
-    <>
-      <section id="hero-dashboard" ref={ref1}>
-        <div className="mx-14 px-2 sm:px-4 lg:px-8 xl:px-16 2xl:px-22 py-8 grid grid-cols-2 grid-flow-row my-16 justify-items-center justify-center ">
-          <div
-            className={`md:container mx-auto max-w-96 px-4 py-4 xl:text-sm transition-all ease-in duration-700 ${
-              isVisible ? "translate-y-0" : "translate-y-52"
-            }`}
-          >
-            <div className="text-warmWhite text-xxxs sm:text-xxs  md:text-lg 2xl:text-3xl font-bold ">
-              Rizky Naufal Alghifary
-            </div>
-            <div className="text-warmWhite text-xxxs sm:text-xxs  md:text-base 2xl:text-2xl py-2 font-medium">
-              Full-stack Developer
-            </div>
-            <div className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4">
-              I am a fresh graduate in Software Engineering from Telkom
-              University, driven by a fervent passion for Mobile and Backend
-              Development. Proficient in Flutter for mobile app development and
-              equipped with a strong foundation in back-end development using
-              Node.js and Express.js. My commitment to continuous learning
-              underscores my dedication to the dynamic fields of back-end and
-              mobile development.
-            </div>
+    <section id="hero-dashboard">
+      <div className=" grid grid-rows-2 gap-4  px-2 sm:px-4 lg:px-8 xl:px-16 2xl:px-22  pb-20 justify-items-center justify-center items-center ">
+        <div className=" grid grid-cols-2 justify-items-end justify-end items-end">
+          <Parallax translateX={["1000px", "-500px"]}>
+            <h1 className="text-warmWhite  text-base sm:text-lg md:text-9xl 2xl:text-17xl font-bold ">
+              Rizky
+            </h1>
+          </Parallax>
 
-            <button className="transition-all ease-out duration-8000  text-xxxs sm:text-xxs lg:text-sm xl:text-sm backdrop-blur-glassBackdrop bg-gradient-to-br from-white/5 to-white/0 border-1 border-zinc-800 px-2 py-2 sm:px-4 sm:py-4 rounded-xl hover:bg-transparent hover:shadow-btnShadow  hover:transition-shadow max-w-20 sm:max-w-40 text-warmWhite hover:text-mainPurple  hover:scale-110">
-              <p className="text-xxxs sm:text-xxs lg:text-sm xl:text-sm font-medium ">
-                Here's My CV
-              </p>
-            </button>
-          </div>
-          <div className="rounded-xl backdrop-blur-glassBackdrop bg-gradient-to-br from-white/5 to-white/0 border-1 border-zinc-800 justify-items-center justify-center shadow-cardShadow hover:bg-transparent hover:shadow-inherit hover:transition-shadow max-h-40 sm:max-h-56 lg:max-h-fit">
-            <div className="grid grid-flow-col grid-cols-1 ">
-              <img
-                className="w-40 sm:w-56 lg:w-fit mx-auto "
-                src="/assets/img/foto-ai.png"
-                alt="foto-hero"
-              />
-            </div>
-          </div>
+          <p className="text-warmWhite text-xxxs sm:text-xxs pe-12 mx-auto md:text-base 2xl:text-lg  font-medium ">
+            Fresh graduate with a year experience <br></br>
+            as Front-end Developer and Back-end Developer
+          </p>
         </div>
-      </section>
-    </>
+
+        <div
+          className={`mx-auto px-4 py-4 transition-all ease-in duration-700 `}
+        >
+          {" "}
+          <Parallax translateX={["-400px", "800px"]}>
+            <div className="text-warmWhite text-base sm:text-lg  md:text-9xl 2xl:text-17xl font-bold ms-80">
+              Naufal
+            </div>{" "}
+          </Parallax>
+        </div>
+      </div>
+    </section>
   );
 }

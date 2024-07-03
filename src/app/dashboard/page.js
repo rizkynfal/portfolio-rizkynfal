@@ -1,22 +1,24 @@
+"use client";
+import { ParallaxProvider } from "react-scroll-parallax";
 import About from "../../components/home/About";
 import Hero from "../../components/home/Hero";
-import Projects from "../../components/home/Projects";
+import Experience from "../../components/home/Experience";
 
 const Dashboard = () => {
   return (
-    <>
-      <section className="">
-        <div className="my-auto">
+    <ParallaxProvider>
+      <section className="py-20  bg-mainBlack">
+        <div className="my-10 ">
           <Hero />
         </div>
-        <div className=" my-auto">
+        <div className="my-10 ">
+          <Experience />
+        </div>
+        <div className="my-10 ">
           <About />
         </div>
-        <div className=" my-auto">
-          <Projects />
-        </div>
       </section>
-    </>
+    </ParallaxProvider>
   );
 };
 

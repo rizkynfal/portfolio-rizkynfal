@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import { useEffect, useState } from "react";
 
-export default function useIsVisible(ref) {
+export  function useIsVisible(ref) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
@@ -17,3 +17,4 @@ export default function useIsVisible(ref) {
 
   return isIntersecting;
 }
+
