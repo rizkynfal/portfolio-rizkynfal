@@ -26,6 +26,8 @@ module.exports = {
         xs: "0.9px",
       },
       fontSize: {
+        xxxxxs: "4px",
+        xxxxs: "6px",
         xxxs: "8px",
         xxs: "10px",
         "10xl": "140px",
@@ -43,8 +45,10 @@ module.exports = {
         warmWhite: "#dddddd",
         btnHoverColor: "rgb(119,85,204)",
         mainPurple: "rgb(172, 96, 255)",
+        sidebarColor: "#1c1c1c",
         mainBlack: "#121212",
         secondBlack: "#0A0A0A",
+        projectedai: "#204859",
       },
       textColor: {
         mainPurple: "rgb(172, 96, 255)",
@@ -57,7 +61,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       borderWidth: {
-        1: "0.5px",
+        1: "1px",
       },
 
       backgroundImage: {

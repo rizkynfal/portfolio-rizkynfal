@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="bg-black backdrop-blur-xl dark:text-white w-full static ">
-      <div className="flex flex-col items-center  text-center text-surface ">
-        <div className="container px-6 pt-6">
+    <footer className="bg-mainBlack dark:text-white mx-auto " id="contact" >
+      <div className="flex flex-col items-center  text-center text-surface border-t-1 border-zinc-800">
+        <div className="container px-6 pt-6 ">
           <div className="mb-6 md:me-auto">
             <h1 className="text-white text-center text-4xl font-bold my-4">
               Contact
@@ -12,10 +12,11 @@ export default function Footer() {
               data-taos-offset="400"
             >
               If you want to hire me or need more information about me, please
-              do not hesitate to contact me. Thank you for your time.
+              do not hesitate to contact me.<br></br>
+              Thank you for your time.
             </p>
           </div>
-          <div className="mb-6 flex justify-center space-x-2">
+          <div className="mb-6 flex justify-center space-x-2 ">
             <a
               href="mailto:naufalrizky79@gmail.com"
               aria-label="gmail"

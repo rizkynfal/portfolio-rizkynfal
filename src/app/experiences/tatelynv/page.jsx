@@ -1,9 +1,9 @@
-export default function Experiences() {
+export default function ExpTately() {
   return (
     <>
-      <section id="exp-ismart">
+      <section id="exp-tately">
         <div className="grid grid-cols-1">
-        
+         
         </div>
       </section>
     </>
