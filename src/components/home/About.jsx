@@ -15,18 +15,21 @@ export default function About() {
                 Rizky Naufal Alghifary
               </div>
               <div className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4">
-                I am a fresh graduate in Software Engineering from Telkom
-                University, driven by a fervent passion for Mobile and Backend
-                Development. Proficient in Flutter for mobile app and web
-                development and equipped with a strong foundation in back-end
-                development using Node.js and Express.js. My commitment to
-                continuous learning underscores my dedication to the dynamic
-                fields of back-end, mobile and front-end development.
+                I am a versatile full-stack developer specializing in mobile and
+                web development using Flutter and Node.js. With a strong focus
+                on delivering high-quality, efficient solutions, I have
+                successfully completed numerous projects, including complex
+                supply chain applications and AI-based products. I also have
+                experience mentoring students in various programming languages
+                and frameworks, consistently helping them master core concepts.
               </div>
               <button
                 className={`transition-all ease-out duration-8000  text-xxxs sm:text-xxs lg:text-sm xl:text-sm backdrop-blur-glassBackdrop bg-gradient-to-br from-white/5 to-white/0 border-1 border-zinc-800 px-2 py-2 sm:px-4 sm:py-4 rounded-xl hover:bg-transparent hover:shadow-btnShadow hover:transition-shadow max-w-20 sm:max-w-40 text-warmWhite hover:text-mainPurple hover:scale-110`}
               >
-                <a href="/assets/static/Rizky_Naufal_Alghifari.pdf" className="text-xxxs sm:text-xxs lg:text-sm xl:text-sm font-medium ">
+                <a
+                  href="/assets/static/Rizky_Naufal_Alghifari.pdf"
+                  className="text-xxxs sm:text-xxs lg:text-sm xl:text-sm font-medium "
+                >
                   Here's My CV
                 </a>
               </button>

@@ -6,14 +6,14 @@ import Experience from "../../components/home/Experience";
 
 const Dashboard = () => {
   return (
-    <section className="mx-auto px-2 sm:px-4 lg:pX-8 xl:px-16 2xl:px-22">
-      <div className="px-2 sm:px-4 lg:px-8 xl:px-16 2xl:px-22 ">
+    <section className="mx-auto px-2 sm:px-32 lg:px-32 xl:px-32 2xl:px-32">
+      <div className="px-2">
         <Hero />
       </div>
-      <div className="px-2 sm:px-4 lg:px-8 xl:px-16 2xl:px-22 my-60">
+      <div className="px-2 my-60">
         <About />
       </div>
-      <div className=" px-2 sm:px-4 lg:px-8 xl:px-16 2xl:px-22 my-40">
+      <div className=" px-2 my-40">
         <Experience />
       </div>
     </section>
