@@ -6,7 +6,7 @@ import Experience from "../../components/home/Experience";
 
 const Dashboard = () => {
   return (
-    <section className="mx-auto px-2 sm:px-32 lg:px-32 xl:px-32 2xl:px-32">
+    <section id="dashboard" className="mx-auto">
       <div className="px-2">
         <Hero />
       </div>
