@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-mainBlack ">
         <Navbar />
-        <section className="py-32 mx-auto lg:mx-32 px-2 sm:px-32 lg:px-56 ">
+        <section className=" mx-auto lg:mx-32 px-2 sm:px-32 lg:px-56 ">
           {children ?? <Dashboard />}
         </section>
         <Footer />

@@ -6,14 +6,14 @@ export default function Experience() {
   return (
     <section id="experiences" className="">
       <div className="mx-auto">
-        <h1 className="text-warmWhite md:text-5xl text-8xl font-bold mb-10 text-center">
+        <h1 className="text-warmWhite md:text-5xl text-4xl  lg:text-8xl font-bold mb-10 text-center">
           Experiences
         </h1>
         <div className="flex flex-wrap justify-items-start justify-start ">
-          <h1 className="text-warmWhite md:text-5xl text-8xl font-bold mb-10 ">
+          <h1 className="text-warmWhite md:text-5xl text-xl xl:text-6xl font-bold mb-10 ">
             Professional
           </h1>
-          <div className="grid grid-cols-2 grid-flow-row-dense gap-16 my-4 ">
+          <div className="grid grid-rows-1 lg:grid-cols-2 grid-flow-row-dense gap-16 my-4 ">
             {expData.data.map((e) => {
               return (
                 <div
@@ -51,7 +51,7 @@ export default function Experience() {
                         <br></br>
                         {e.proLang}
                       </p>
-                      <p className="text-warmWhite mt-2 mb-2 text-start">
+                      <p className="text-warmWhite mt-2 mb-2 text-sm lg:text-base text-start">
                         {e.desc}
                       </p>
                     </div>
@@ -68,10 +68,10 @@ export default function Experience() {
               );
             })}
           </div>
-          <h1 className="text-warmWhite md:text-5xl text-8xl font-bold mb-10">
+          <h1 className="text-warmWhite md:text-5xl text-xl xl:text-6xl font-bold mb-10">
             Organizational & Laboratory Experience
           </h1>
-          <div className="grid grid-cols-2 grid-flow-row-dense gap-16 ">
+          <div className="grid grid-rows-1 lg:grid-cols-2 grid-flow-row-dense gap-16 ">
             {expData2.data.map((e) => {
               return (
                 <div
@@ -103,7 +103,7 @@ export default function Experience() {
                         <br></br>
                         {e.proLang}
                       </p>
-                      <p className="text-warmWhite mt-2 mb-2 text-start">
+                      <p className="text-warmWhite mt-2 mb-2 text-base lg:text-lg text-start">
                         {e.desc}
                       </p>
                     </div>

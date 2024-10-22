@@ -108,7 +108,7 @@ export default function Navbar() {
         {[
           { name: "Discover", url: "/" },
           { name: "About", url: "/about" },
-          { name: "Experience", url: "/experience" },
+          { name: "Experience", url: "/experiences" },
         ].map((val, index) => (
           <ul key={index} className="space-y-2 font-medium ">
             <li key={val.name}>

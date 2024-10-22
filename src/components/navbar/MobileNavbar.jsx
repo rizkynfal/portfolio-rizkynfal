@@ -11,7 +11,7 @@ export default function Navbar() {
       <nav className="flex-no-wrap fixed top-0 z-10 flex w-full items-center justify-center backdrop-blur-xl lg:flex-wrap lg:justify-start lg:py-4 ">
         <button
           onClick={toogleHumberger}
-          className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          className="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden items-start"
           type="button"
           data-twe-collapse-init
           data-twe-target="#navbarSupportedContent1"
@@ -19,7 +19,7 @@ export default function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="[&>svg]:w-7">
+          <span className="[&>svg]:w-7 items-start">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -40,60 +40,39 @@ export default function Navbar() {
           } flex w-full flex-wrap items-center justify-center px-3 mx-auto `}
         >
           <div
-            className={` flex-grow basis-[100%] items-center lg:!flex lg:basis-auto `}
+            className={`flex-grow basis-[100%] items-start lg:!flex lg:basis-auto text-start`}
             id="navbarSupportedContent1"
             data-twe-collapse-item
           >
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ms-48">
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start ms-48 ">
               <a
-                className="items-center text-transparent bg-warmWhite bg-clip-text text-2xl font-bold "
+                className="items-start text-transparent bg-warmWhite bg-clip-text text-2xl font-bold text-start"
                 href="/"
               >
                 rizkynfal
               </a>
             </div>
-
-            <ul
-              className="list-style-none me-48 flex flex-col ps-0 lg:flex-row"
-              data-twe-navbar-nav-ref
-            >
-              <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                <a
-                  href="#experiences"
-                  className="rounded-md px-3 py-2 text-transparent bg-warmWhite bg-clip-text text-lg font-medium transition duration-200  hover:ease-in-out motion-reduce:transition-none"
-                  data-twe-nav-link-ref
+            {[
+              { name: "Discover", url: "/" },
+              { name: "About", url: "/about" },
+              { name: "Experience", url: "/experiences" },
+            ].map((val, index) => (
+              <ul key={index} className="space-y-2 font-medium ">
+                <li
+                  key={index}
+                  className="mb-4 lg:mb-0 lg:pe-2"
+                  data-twe-nav-item-ref
                 >
-                  Experiences
-                </a>
-              </li>
-              <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                <a
-                  href="#about"
-                  className="rounded-md px-3 py-2 text-transparent bg-warmWhite bg-clip-text text-lg font-medium transition duration-200  hover:ease-in-out motion-reduce:transition-none"
-                  data-twe-nav-link-ref
-                >
-                  About
-                </a>
-              </li>
-              <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                <a
-                  href="https://github.com/rizkynfal/"
-                  className="rounded-md px-3 py-2 text-transparent bg-warmWhite bg-clip-text text-lg font-medium transition duration-200  hover:ease-in-out motion-reduce:transition-none"
-                  data-twe-nav-link-ref
-                >
-                  Github
-                </a>
-              </li>
-              <li className="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                <a
-                  href="https://linkedin.com/in/rizkynfal/"
-                  className="rounded-md px-3 py-2 text-transparent bg-warmWhite bg-clip-text text-lg font-medium transition duration-200  hover:ease-in-out motion-reduce:transition-none"
-                  data-twe-nav-link-ref
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
+                  <a
+                    href={val.url}
+                    className="rounded-md px-3 py-2 text-transparent bg-warmWhite bg-clip-text text-lg font-medium transition duration-200  hover:ease-in-out motion-reduce:transition-none"
+                    data-twe-nav-link-ref
+                  >
+                    {val.name}
+                  </a>
+                </li>
+              </ul>
+            ))}
           </div>
         </div>
       </nav>
