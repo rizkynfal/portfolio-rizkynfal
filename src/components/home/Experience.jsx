@@ -68,10 +68,11 @@ export default function Experience() {
               );
             })}
           </div>
-          <h1 className="text-warmWhite md:text-5xl text-xl xl:text-6xl font-bold mb-10">
+
+          <h1 className="text-warmWhite md:text-5xl text-xl xl:text-6xl font-bold mt-10">
             Organizational & Laboratory Experience
           </h1>
-          <div className="grid grid-rows-1 lg:grid-cols-2 grid-flow-row-dense gap-16 ">
+          <div className="grid grid-rows-1 lg:grid-cols-2 grid-flow-row-dense gap-16 my-10">
             {expData2.data.map((e) => {
               return (
                 <div

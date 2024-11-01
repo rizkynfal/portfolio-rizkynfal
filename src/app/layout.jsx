@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-mainBlack ">
         <Navbar />
-        <section className=" mx-auto lg:mx-32 px-2 sm:px-32 lg:px-56 ">
+        <section className="mx-auto px-2 sm:px-24 sm:ms-48 lg:ps-60 lg:ms-32 ">
           {children ?? <Dashboard />}
         </section>
         <Footer />

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Experience() {
   return (
-    <section id="experiences" className="">
+    <section id="experiences" className="my-12">
       <div className="mx-auto">
         <h1 className="text-warmWhite md:text-5xl text-4xl  lg:text-8xl font-bold mb-10 text-center">
           Experiences

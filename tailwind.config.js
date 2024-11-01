@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        base: "1000px",
+      },
       transitionDuration: {
         8000: "8000ms",
       },

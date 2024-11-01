@@ -1,26 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
-import { styled, useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import MuiDrawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import {
-  ContactMailOutlined,
   EmailRounded,
   GitHub,
-  Home,
-  Face,
   LinkedIn,
   Work,
   Explore,
   Badge,
   WhatsApp,
+  KeyboardArrowUp,
+  KeyboardArrowUpRounded,
+  KeyboardArrowDownRounded,
 } from "@mui/icons-material";
 import { isMobile } from "../utils/WebScale";
 import MobileNavbar from "./MobileNavbar";
@@ -28,8 +23,18 @@ import MobileNavbar from "./MobileNavbar";
 export default function Navbar() {
   const [open, setOpen] = useState(true);
   const [mobileDevice, setMobileDevice] = useState(false);
+  const [openSubMenu, setOpenSubMenu] = useState(false);
   const handleDrawer = () => {
     setOpen(!open);
+    if (open) {
+      setOpenSubMenu(false);
+    }
+  };
+  const handleSubMenu = () => {
+    if (!open) {
+      setOpen(true);
+    }
+    setOpenSubMenu(!openSubMenu);
   };
   const setMobile = (mobileScreen) => {
     setMobileDevice(mobileScreen);
@@ -106,16 +111,37 @@ export default function Navbar() {
         </div>
         <Divider className="bg-sidebarColor py-4" />
         {[
-          { name: "Discover", url: "/" },
-          { name: "About", url: "/about" },
-          { name: "Experience", url: "/experiences" },
+          { name: "Discover", url: "/", subMenu: null },
+          { name: "About", url: "/about", subMenu: null },
+          {
+            name: "Experience",
+            url: "/experiences",
+            subMenu: [
+              {
+                name: "Altimeda Cipta Visitama",
+                url: "/experiences/altimeda",
+              },
+              {
+                name: "Freelance",
+                url: "/experiences/freelance",
+              },
+              {
+                name: "Ismart Inter Global",
+                url: "/experiences/ismart",
+              },
+              {
+                name: "Tately Nv",
+                url: "/experiences/tatelynv",
+              },
+            ],
+          },
         ].map((val, index) => (
           <ul key={index} className="space-y-2 font-medium ">
-            <li key={val.name}>
-              <div className={`${open ? "mx-0" : "mx-auto"}`}>
+            <li key={val.name} className="pe-4">
+              <div className={`${open ? "mx-0" : "mx-auto"} flex`}>
                 <a
                   href={val.url}
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  className="flex-1 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group me-auto"
                 >
                   {index === 0 ? (
                     <Explore />
@@ -124,12 +150,41 @@ export default function Navbar() {
                   ) : (
                     <Work />
                   )}
-
                   <span className={`${open ? "visible" : "hidden"} ms-3`}>
                     {val.name}
                   </span>
                 </a>
+                {val.subMenu ? (
+                  <button className="" onClick={handleSubMenu}>
+                    <span className="flex ms-auto rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                      {!openSubMenu ? (
+                        <KeyboardArrowDownRounded />
+                      ) : (
+                        <KeyboardArrowUpRounded />
+                      )}
+                    </span>
+                  </button>
+                ) : null}
               </div>
+              {val.subMenu ? (
+                <ul
+                  id="dropdown-example"
+                  className={`${
+                    openSubMenu ? "visible" : "hidden"
+                  } space-y-2  list-disc ms-10`}
+                >
+                  {val.subMenu.map((val, index) => (
+                    <li key={index}>
+                      <a
+                        href={val.url}
+                        className="p-2 flex items-start text-gray-900 rounded-lg text-sm dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                      >
+                        {val.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </li>
           </ul>
         ))}
