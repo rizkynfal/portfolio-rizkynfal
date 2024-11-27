@@ -18,7 +18,10 @@ export default function ExpIsmartFe() {
               <CarouselSlider sliderData={sliderSCC} />
             </div>
             <div>
-              <ul className="text-warmWhite list-disc ml-5 mt-4 text-base md:text-lg">
+              {" "}
+              <h2>{sliderSCC.role}</h2>
+              <p>{sliderSCC.desc}</p>
+              <ul className="text-warmWhite list-disc ml-5 mt-4 text-sm lg:text-lg">
                 {sliderSCC.descDetail.map((item) => (
                   <li key={item}>{item}</li>
                 ))}

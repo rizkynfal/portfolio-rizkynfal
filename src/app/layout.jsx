@@ -16,6 +16,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Rizky Portfolio</title>
+        <link
+          rel="icon"
+          href="/vercel.ico"
+          type="image/x-icon"
+          sizes="16x16"
+        />
       </head>
       <body className="bg-mainBlack ">
         <Navbar />

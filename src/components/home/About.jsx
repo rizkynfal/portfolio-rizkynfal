@@ -14,7 +14,7 @@ export default function About() {
               <div className="text-warmWhite text-xxxs sm:text-xxs md:text-lg 2xl:text-3xl font-bold ">
                 Rizky Naufal Alghifary
               </div>
-              <div className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4">
+              <div className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4" id="desc-about-me">
                 I am a versatile full-stack developer specializing in mobile and
                 web development using Flutter and Node.js. With a strong focus
                 on delivering high-quality, efficient solutions, I have
@@ -23,16 +23,6 @@ export default function About() {
                 experience mentoring students in various programming languages
                 and frameworks, consistently helping them master core concepts.
               </div>
-              <button
-                className={`transition-all ease-out duration-8000  text-xxxs sm:text-xxs lg:text-sm xl:text-sm backdrop-blur-glassBackdrop bg-gradient-to-br from-white/5 to-white/0 border-1 border-zinc-800 px-2 py-2 sm:px-4 sm:py-4 rounded-xl hover:bg-transparent hover:shadow-btnShadow hover:transition-shadow max-w-20 sm:max-w-40 text-warmWhite hover:text-mainPurple hover:scale-110`}
-              >
-                <a
-                  href="/assets/static/Rizky_Naufal_Alghifari.pdf"
-                  className="text-xxxs sm:text-xxs lg:text-sm xl:text-sm font-medium "
-                >
-                  Here's My CV
-                </a>
-              </button>
             </div>
             <div className="mx-auto md:ms-auto rounded-xl justify-items-center justify-center max-h-40 sm:max-h-56 lg:max-h-fit  ">
               <div

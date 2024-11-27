@@ -12,14 +12,25 @@ export default function ExpAltimedaBeDev() {
           <span className="bg-clip-text text-transparent bg-projectedai">
             &nbsp;AI
           </span>
-        </h1>
+        </h1>{" "}
+        <h1>{sliderProjectedAI.role}</h1>
         <CarouselSlider sliderData={sliderProjectedAI} />
-        <div>
-          <ul className="text-warmWhite list-disc ml-5 mt-4 text-base md:text-lg ">
+        <div className="py-6">
+          {" "}
+          <p>{sliderProjectedAI.desc}</p>
+          <ul className="text-warmWhite list-disc ml-5 mt-4 text-sm lg:text-lg">
             {sliderProjectedAI.descDetail.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
+          <h2>
+            You can visit the website here:&nbsp;
+            <span>
+              <a href="https://projectedai.au/" className="text-sky-700 ">
+                click here
+              </a>
+            </span>
+          </h2>
         </div>
       </section>
     </>

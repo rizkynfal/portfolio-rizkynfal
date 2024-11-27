@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 
 export default function CarouselSlider({
   sliderData,
+  carouselWmax,
   imageWidth,
   imageHeight,
 }) {
@@ -17,7 +18,9 @@ export default function CarouselSlider({
         autoPlay={true}
         infiniteLoop={true}
         dynamicHeight={false}
-        className={`flex flex-1 rounded-md ${items.bgColor} justify-center items-center max-w-screen-2xl `}
+        className={`flex flex-1 rounded-md ${
+          items.bgColor
+        } justify-center items-center ${carouselWmax ?? "max-w-screen-2xl"} `}
         interval={5000}
       >
         {items.photo.map((item) => (
