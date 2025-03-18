@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Divider from "@mui/material/Divider";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import {
   EmailRounded,
@@ -13,9 +12,9 @@ import {
   Explore,
   Badge,
   WhatsApp,
-  KeyboardArrowUp,
   KeyboardArrowUpRounded,
   KeyboardArrowDownRounded,
+  ContactPage,
 } from "@mui/icons-material";
 import { isMobile } from "../utils/WebScale";
 import MobileNavbar from "./MobileNavbar";
@@ -112,10 +111,10 @@ export default function Navbar() {
         <Divider className="bg-sidebarColor py-4" />
         {[
           { name: "Discover", url: "/", subMenu: null },
-          { name: "About", url: "/about", subMenu: null },
+          { name: "About", url: "/#about", subMenu: null },
           {
             name: "Experience",
-            url: "/experiences",
+            url: "/#experiences",
             subMenu: [
               {
                 name: "Altimeda Cipta Visitama",
@@ -135,6 +134,7 @@ export default function Navbar() {
               },
             ],
           },
+          { name: "Contact", url: "/#contact", subMenu: null },
         ].map((val, index) => (
           <ul key={index} className="space-y-2 font-medium ">
             <li key={val.name} className="pe-4">
@@ -147,8 +147,10 @@ export default function Navbar() {
                     <Explore />
                   ) : index === 1 ? (
                     <Badge />
-                  ) : (
+                  ) : index === 2 ? (
                     <Work />
+                  ) : (
+                    <ContactPage />
                   )}
                   <span className={`${open ? "visible" : "hidden"} ms-3`}>
                     {val.name}

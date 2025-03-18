@@ -18,13 +18,15 @@ export default function About() {
                 className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4"
                 id="desc-about-me"
               >
-                I am a versatile full-stack developer specializing in mobile and
-                web development using Flutter and Node.js. With a strong focus
-                on delivering high-quality, efficient solutions, I have
-                successfully completed numerous projects, including complex
-                supply chain applications and AI-based products. I also have
-                experience mentoring students in various programming languages
-                and frameworks, consistently helping them master core concepts.
+                Versatile IT Developer with expertise in backend, frontend, and
+                mobile application development. Proficient in Node.js, Flutter,
+                TypeScript, and modern frontend frameworks, with a strong
+                background in RESTful API development, microservices
+                architecture, and AI-driven solutions. Passionate about
+                optimizing system performance, building scalable applications,
+                and integrating intelligent automation. Adept at working in
+                cross functional teams to deliver high-quality software
+                solutions
               </div>
             </div>
             <div className="mx-auto md:ms-auto rounded-xl justify-items-center justify-center max-h-40 sm:max-h-56 lg:max-h-fit  ">
