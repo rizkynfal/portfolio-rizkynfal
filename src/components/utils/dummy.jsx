@@ -1,6 +1,17 @@
 const expData = {
   data: [
     {
+      id: "6",
+      company: "Altimeda Cipta Visitama",
+      period: "January 2025 - February 2025",
+      role: "Full Time - Backend Developer",
+      proLang: "Node.js (Typescript)",
+      bgColor: "bg-saunders",
+      photo: "/assets/img/saunders/saunders-logo.png",
+      urlDetail: "/experiences/altimeda/saunders",
+      desc: "Developed RESTful APIs For Web Forecasting that assists in market demand analysis and prediction using historical data.",
+    },
+    {
       id: "4",
       company: "Altimeda Cipta Visitama",
       period: "July 2024 - Present",
@@ -156,7 +167,11 @@ const sliderPei = {
   role: "Contract - Mobile Developer",
   proLang: "Flutter",
   bgColor: "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
-  photo: ["/assets/img/pei/pei-1.jpg", "/assets/img/pei/pei-2.jpg", "/assets/img/pei/pei-3.jpg"],
+  photo: [
+    "/assets/img/pei/pei-1.jpg",
+    "/assets/img/pei/pei-2.jpg",
+    "/assets/img/pei/pei-3.jpg",
+  ],
   urlDetail: "/experiences/tatelynv",
   desc: "Developing Post Energy Indonesia Mobile App for tracking fuel distribution, transaction record and monitoring the record on mobile app",
   descDetail: [
@@ -172,7 +187,7 @@ const sliderTatelyNv = {
   role: "Internship - Mobile Developer",
   proLang: "Flutter",
   bgColor: "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
-  photo: ["/assets/img/hazob/hazob-2.png","/assets/img/hazob/hazob-3.png"],
+  photo: ["/assets/img/hazob/hazob-2.png", "/assets/img/hazob/hazob-3.png"],
   urlDetail: "/experiences/tatelynv",
   desc: "Internship member for 3 months as IT support. Build Mobile Applications as digitalization of Hazard Observation Card. \n Responsibilities that included :",
   descDetail: [
@@ -218,6 +233,35 @@ const sliderGobill = {
     "Automated product availability updates using cron jobs to check-in and update the availability status of the products.",
   ],
 };
+const sliderSaunders = {
+  id: "4",
+  company: "Saunders",
+  period: "January 2025 - February 2025",
+  role: "Full Time - Backend Developer",
+  proLang: "Node.js (Typescript)",
+  bgColor: "bg-green-700",
+  photo: [
+    "/assets/img/saunders/saunders-1.png",
+    "/assets/img/saunders/saunders-2.png",
+    "/assets/img/saunders/saunders-3.png",
+    "/assets/img/saunders/saunders-4.png",
+    "/assets/img/saunders/saunders-5.png",
+  ],
+  urlDetail: "/experiences/saunders",
+  desc: "Developed RESTful APIs For Web Forecasting that assists in market demand analysis and prediction using historical data.",
+  descDetail: [
+    "Developed 12 API endpoints in 1 week using Node.js, Express.js, and TypeScript",
+    "Designed and implemented a database schema using TypeORM for structured data management",
+    "Created entity models and relationships based on forecasting requirements",
+    "Optimized data retrieval and processing using TypeORM query builde",
+    "Mapped and retrieved data from fact tables and forecast records to ensure accurate reporting",
+    "Implemented API endpoints for Forecast approval workflow,  Forecast data submission , Project listing, Monthly forecast retrieval and User-specific forecast views",
+    "Enhanced API efficiency by optimizing queries and implementing proper indexing",
+    "Ensured robust request validation and error handling",
+    "Conducted API testing and debugging for reliability before deployment",
+    "Collaborated with frontend developers for seamless integration",
+  ],
+};
 export {
   expData,
   expData2,
@@ -226,4 +270,5 @@ export {
   sliderTatelyNv,
   sliderSCC,
   sliderGobill,
+  sliderSaunders,
 };

@@ -14,7 +14,10 @@ export default function About() {
               <div className="text-warmWhite text-xxxs sm:text-xxs md:text-lg 2xl:text-3xl font-bold ">
                 Rizky Naufal Alghifary
               </div>
-              <div className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4" id="desc-about-me">
+              <div
+                className="text-xxxs sm:text-xxs md:text-base 2xl:text-lg text-warmWhite font-medium mb-4"
+                id="desc-about-me"
+              >
                 I am a versatile full-stack developer specializing in mobile and
                 web development using Flutter and Node.js. With a strong focus
                 on delivering high-quality, efficient solutions, I have

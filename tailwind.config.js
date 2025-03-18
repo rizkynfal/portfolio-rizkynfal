@@ -52,6 +52,7 @@ module.exports = {
         mainBlack: "#121212",
         secondBlack: "#0A0A0A",
         projectedai: "#204859",
+        saunders: "#117931"
       },
       textColor: {
         mainPurple: "rgb(172, 96, 255)",
