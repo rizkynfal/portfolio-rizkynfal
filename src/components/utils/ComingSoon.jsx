@@ -1,20 +1,18 @@
+import Link from "next/link";
+
 export default function ComingSoon() {
   return (
-    <>
-      <div className="relative flex flex-col  place-items-center ">
-        <h2 className="text-center font-heading m-10 text-6xl sm:text-7xl lg:text-8xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-black	 ">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-            Coming Soon
-          </span>
-          <span className="">⏳</span>
-        </h2>
-        <p
-          className="text-2xl md:text-3xl px-6 max-w-3xl text-center m-5 text-slate-800 dark:text-slate-100 font-thin"
-          dangerouslySetInnerHTML={{
-            __html: "This page is under development.",
-          }}
-        ></p>
+    <section className="container-x grid min-h-[70vh] place-items-center pt-32 text-center">
+      <div>
+        <span className="eyebrow">In progress</span>
+        <h1 className="mt-4 font-display text-5xl font-semibold text-gradient sm:text-7xl">
+          Coming soon
+        </h1>
+        <p className="mt-4 text-zinc-400">This page is under development.</p>
+        <Link href="/" className="btn-ghost mt-8">
+          Back home
+        </Link>
       </div>
-    </>
+    </section>
   );
 }

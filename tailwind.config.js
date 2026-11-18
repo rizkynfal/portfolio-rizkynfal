@@ -1,77 +1,51 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,jsx,mdx}",
+    "./src/app/**/*.{js,jsx,mdx}",
+    "./src/data/**/*.{js,jsx}",
   ],
   theme: {
     extend: {
-      screens: {
-        base: "1000px",
+      fontFamily: {
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-sans)", "sans-serif"],
       },
-      transitionDuration: {
-        8000: "8000ms",
+      colors: {
+        ink: {
+          950: "#07070A",
+          900: "#0B0B10",
+          800: "#121219",
+          700: "#1A1A23",
+        },
+        brand: {
+          200: "#DDD6FE",
+          300: "#C4B5FD",
+          400: "#A78BFA",
+          500: "#8B5CF6",
+          600: "#7C3AED",
+        },
+      },
+      maxWidth: { content: "1200px" },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
+        float: {
+          "0%,100%": { transform: "translate(0,0) scale(1)" },
+          "50%": { transform: "translate(30px,-20px) scale(1.06)" },
+        },
+        pulseDot: {
+          "0%": { boxShadow: "0 0 0 0 rgba(52,211,153,.6)" },
+          "100%": { boxShadow: "0 0 0 10px rgba(52,211,153,0)" },
+        },
       },
       animation: {
-        wiggle: "wiggle 5s ease-in-out infinite",
-      },
-      maxHeight: {
-        maxHeightCard: "450px",
-      },
-      borderRadius: {
-        glassRadius: "10px",
-      },
-      backdropBlur: {
-        glassBackdrop: "4px",
-      },
-      padding: {
-        xs: "0.9px",
-      },
-      fontSize: {
-        xxxxxs: "4px",
-        xxxxs: "6px",
-        xxxs: "8px",
-        xxs: "10px",
-        "10xl": "140px",
-        "11xl": "155px",
-        "12xl": "165px",
-        "17xl": "280px",
-      },
-      boxShadow: {
-        cardShadow: "0 0px 40px -20px #7b00ff",
-        btnShadow: "0 5px 11px #7b00ff",
-        glassShadow: " 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-      },
-      backgroundColor: {
-        glassBg: "rgba( 255, 255, 255, 0.15 )",
-        warmWhite: "#dddddd",
-        btnHoverColor: "rgb(119,85,204)",
-        mainPurple: "rgb(172, 96, 255)",
-        sidebarColor: "#1c1c1c",
-        mainBlack: "#121212",
-        secondBlack: "#0A0A0A",
-        projectedai: "#204859",
-        saunders: "#117931"
-      },
-      textColor: {
-        mainPurple: "rgb(172, 96, 255)",
-        mainBlack: "#0A0A0A",
-        warmWhite: "#dddddd",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      borderWidth: {
-        1: "1px",
-      },
-
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        marquee: "marquee 40s linear infinite",
+        float: "float 14s ease-in-out infinite",
+        "float-slow": "float 20s ease-in-out infinite reverse",
+        "pulse-dot": "pulseDot 1.8s ease-out infinite",
       },
     },
   },

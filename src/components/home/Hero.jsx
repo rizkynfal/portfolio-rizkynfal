@@ -24,7 +24,7 @@ export default function Hero() {
           className={`transition-all ease-out duration-8000  text-xxxs sm:text-xxs lg:text-sm xl:text-sm backdrop-blur-glassBackdrop bg-gradient-to-br from-white/5 to-white/0 border-1 border-zinc-800 px-2 py-2 sm:px-4 sm:py-4 rounded-xl hover:bg-transparent hover:shadow-btnShadow hover:transition-shadow max-w-20 sm:max-w-40 text-warmWhite hover:text-mainPurple hover:scale-110`}
         >
           <a
-            href="/assets/static/Rizky_Naufal_Alghifari.pdf"
+            href="/assets/static/Rizky_Naufal_Alghifary-resume.pdf"
             className="text-xxxs sm:text-xxs lg:text-sm xl:text-sm font-medium"
           >
             Here's My CV

@@ -1,33 +1,41 @@
-import { Inter } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Dashboard from "./dashboard/page";
-import Footer from "../components/footer/Footer";
-import Navbar from "../components/navbar/Navbar";
-import { Box } from "@mui/material";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
+import { profile } from "@/data/profile";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+const display = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Rizkynfal Portfolio",
+  metadataBase: new URL("https://rizkynfal.vercel.app"),
+  title: {
+    default: `${profile.name} — ${profile.role}`,
+    template: `%s · ${profile.shortName}`,
+  },
+  description: profile.summary,
+  openGraph: {
+    title: `${profile.name} — ${profile.role}`,
+    description: profile.summary,
+    images: [profile.photo],
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <title>Rizky Portfolio</title>
-        <link
-          rel="icon"
-          href="/vercel.ico"
-          type="image/x-icon"
-          sizes="16x16"
-        />
-      </head>
-      <body className="bg-mainBlack ">
+    <html lang="en" className={`${sans.variable} ${display.variable}`}>
+      <body className="min-h-screen overflow-x-hidden">
         <Navbar />
-        <section className="mx-auto px-2 sm:px-24 sm:ms-48 lg:ps-60 lg:ms-32 ">
-          {children ?? <Dashboard />}
-        </section>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
