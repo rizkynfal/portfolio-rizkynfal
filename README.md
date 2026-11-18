@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# rizkynfal — Portfolio
 
-## Getting Started
+Personal portfolio of **Rizky Naufal Alghifary**, Software Engineer (Backend · Gen AI · Mobile).
+Live: https://rizkynfal.vercel.app
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Next.js 15 (App Router) + React 18
+- Tailwind CSS 3
+- Framer Motion (scroll reveals, tab/filters, counters — respects `prefers-reduced-motion`)
+- lucide-react icons
+
+## Editing content
+
+All copy (profile, stats, services, experience, projects, skills, education) lives in
+[`src/data/profile.js`](src/data/profile.js). Update it there and every page picks it up.
+Project screenshots live in `public/assets/img/<project>/`, and the CV is
+`public/assets/static/Rizky_Naufal_Alghifari.pdf`.
+
+## Structure
+
+```
+src/
+  app/                    routes (home, /experiences, company + case-study pages)
+  components/
+    navbar/, footer/
+    sections/             Hero, About, Services, Experience, Work, Skills, Contact, CaseStudy
+    ui/                   Reveal, CountUp, Marquee, Gallery, Spotlight, SectionHeading
+  data/profile.js         content
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm install
+npm run dev
+```
